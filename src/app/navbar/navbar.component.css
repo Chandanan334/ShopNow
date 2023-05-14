@@ -1,0 +1,125 @@
+ul { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    background-color: #333; 
+}
+
+li { 
+    float: left; 
+} 
+
+li a { 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    padding: 0px 0px; 
+    text-decoration: none; 
+} 
+li img { 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+} 
+
+/* Change the link color to #111 (black) on hover */ 
+li a:hover { 
+    background-color: #111; 
+} 
+
+.icon{ 
+    display: flex; 
+    position:absolute; 
+    right: 50px; 
+    top: 24px; 
+}
+.hello{
+    display: flex;
+    position:absolute;
+    right: 100px;
+    top: 24px;
+}
+
+
+.home{ 
+    display: flex; 
+    position:absolute; 
+    left: 110px; 
+    top: 24px; 
+}
+
+.form-search{ 
+    margin: 9px auto; 
+    text-align: center; 
+    font:  13px sans-serif; 
+    max-width: 70%; 
+    position: relative; 
+}
+
+.form-search input{ 
+    width: 60%; 
+    box-sizing: border-box; 
+    border-bottom-left-radius: 2px; 
+    border-top-left-radius: 2px; 
+    background-color: #ffffff; 
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08); 
+    padding: 14px 15px 14px 40px; 
+    border: 1px solid #b6c3cd; 
+    border-right: 0; 
+    color:#4E565C; 
+    outline: none; 
+  
+}
+
+.form-search button{ 
+    border-bottom-right-radius: 2px; 
+    border-top-right-radius: 2px; 
+    background-color: #6caee0; 
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08); 
+    color: #ffffff; 
+    padding: 15px 22px; 
+    margin-left: -4px; 
+    cursor: pointer; 
+    border: none; 
+    outline: none; 
+} 
+
+.form-search i{ 
+    position: absolute; 
+    top: 15px; 
+    left: 20px; 
+    font-size: 16px; 
+    color: #80A3BD; 
+}
+
+ul li a:hover { 
+    color: #fff; 
+    background:black; 
+}
+
+ul li ul.dropdown { 
+    min-width: 100%; 
+    /* Set width of the dropdown */ 
+    background: black; 
+    width: 200px;
+    display: none; 
+    position: absolute; 
+    z-index: 999; 
+    left: -100px;
+    top: 40px; 
+}
+
+ul li:hover ul.dropdown { 
+    display: block; 
+    /* Display the dropdown */ 
+} 
+
+
+.dropdowna { 
+    display: block; 
+    padding: 8px 25px; 
+    color: #fff; 
+    text-decoration: none; 
+}

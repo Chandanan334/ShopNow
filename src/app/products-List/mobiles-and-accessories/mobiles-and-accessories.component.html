@@ -1,0 +1,154 @@
+<!-- <app-navbar></app-navbar> -->
+<h2>Mobiles & Accessories</h2>
+
+<div class="container">
+        <div class="row" >
+            <div class="col-sm-6 d-flex" *ngFor="let i of productData| slice:0:6">
+                <div class="card" style="width:400px">
+                    <a href="productPage" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                            <h4 class="card-title">{{i.name}}</h4>
+                            <p class="card-text">{{i.symbol}}
+                                <strong style="font-size: 25px">{{i.price}} </strong>
+                                <s>{{i.actualPrice}}</s> {{i.offer}}
+                                <br>{{i.delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- <div class="container">
+        <div class="row">
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a routerLink="http://localhost:4200/productPage" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[0].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">{{productData[0].name}}<br>{{productData[0].color}}</h4>
+                                <p class="card-text">{{productData[0].symbol}} <strong style="font-size: 25px">{{productData[0].price}} </strong> <s>{{productData[0].actualPrice}}</s> {{productData[0].offer}} 
+                                    <br>{{productData[0].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a href="#" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[1].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">{{productData[1].name}}<br>{{productData[1].color}}</h4>
+                                <p class="card-text">{{productData[0].symbol}} <strong style="font-size: 25px">{{productData[1].price}} </strong> <s>{{productData[1].actualPrice}}</s> {{productData[1].offer}} 
+                                    <br>{{productData[1].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a href="#" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[2].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">S{{productData[2].name}}<br>- Phantom Black</h4>
+                                <p class="card-text">{{productData[2].symbol}} <strong style="font-size: 25px">{{productData[2].price}} </strong> <s>{{productData[2].actualPrice}}</s> {{productData[2].offer}} 
+                                    <br>{{productData[2].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a href="#" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[3].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">{{productData[3].name}} <br>- Black</h4>
+                                <p class="card-text">{{productData[3].symbol}} <strong style="font-size: 25px">{{productData[3].price}} </strong> <s>{{productData[3].actualPrice}}9</s> {{productData[3].offer}} 
+                                    <br>{{productData[3].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a href="#" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[4].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">{{productData[4].name}} - Red</h4>
+                                <p class="card-text">{{productData[4].symbol}} <strong style="font-size: 25px">{{productData[4].price}} </strong> <s>{{productData[4].actualPrice}}</s> {{productData[4].offer}}
+                                    <br>{{productData[4].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="col-sm-6 d-flex">
+                <div class="card" style="width:400px">
+                    <a href="#" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{productData[5].image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+                                <h4 class="card-title">{{productData[5].name}}</h4>
+                                <p class="card-text">{{productData[5].symbol}} <strong style="font-size: 25px">{{productData[5].price}} </strong> <s>{{productData[5].actualPrice}}</s> {{productData[5].offer}} 
+                                    <br>{{productData[5].delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </div> -->
+    
+
