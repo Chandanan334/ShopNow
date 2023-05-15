@@ -25,20 +25,20 @@ const routes: Routes = [
     component: HomeEssentialsComponent
   },
   {
-    path:'productPage',
+    path:'productPage/:productId',
     component: ProductPageComponent
   },
   //shared URL's
   {
-    path:'mobileAndAccessories/productPage',
+    path:'mobileAndAccessories/productPage/:productId',
     component: ProductPageComponent
   },
   {
-    path:'clothing/productPage',
+    path:'clothing/productPage/:productId',
     component: ProductPageComponent
   },
   {
-    path:'homeEssentials/productPage',
+    path:'homeEssentials/productPage/:productId',
     component: ProductPageComponent
   },
 

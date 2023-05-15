@@ -18,4 +18,4 @@ export const ProductData=[
 
 ];
 
-export const addToCart="Add To Cart"
+// export const addToCart="Add To Cart"
