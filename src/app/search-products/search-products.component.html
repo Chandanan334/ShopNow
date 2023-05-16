@@ -1,21 +1,23 @@
-<div class="container">
-    <div class="row">
-    <div class="col-sm-6 d-flex" *ngFor="let i of item">
-    
-        <div class="card" style="width:400px">
-                <a href="productPage/{{i.id}}" class="stretched-link" style="color: black">
-            <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
-            <div class="card-body">
-            
-                <h4 class="card-title">{{i.name}}</h4>
-            
-                <p class="card-text">{{i.symbol}}
-                    <strong style="font-size: 25px">{{i.price}} </strong>
-                
-                    <s>{{i.actualPrice}}</s> {{i.offer}}
-                    <br>{{i.delivery}}</p>
+<div style="background-image: url('assets/categoryBImage.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 d-flex" *ngFor="let i of item">
+
+                <div class="card" style="width:400px">
+                    <a href="productPage/{{i.id}}" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
+                        <div class="card-body">
+
+                            <h4 class="card-title">{{i.name}}</h4>
+
+                            <p class="card-text">{{i.symbol}}
+                                <strong style="font-size: 25px">{{i.price}} </strong>
+
+                                <s>{{i.actualPrice}}</s> {{i.offer}}
+                                <br>{{i.delivery}}</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
             </div>
         </div>
     </div>

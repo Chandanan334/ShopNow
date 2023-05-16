@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductData } from 'src/shared/product-data';
-import {SearchProductsComponent} from 'src/app/search-products/search-products.component'
+import { SearchProductsComponent } from 'src/app/search-products/search-products.component'
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +9,20 @@ import {SearchProductsComponent} from 'src/app/search-products/search-products.c
 })
 export class NavbarComponent {
 
-  productData:any = ProductData;
-  productsearch:any;
+  productData: any = ProductData;
+  productsearch: any;
 
-submitSearch(val:any){
-  console.warn(val);
+  submitSearch(val: string) {
+    console.warn(val);
 
-  this.productsearch=this.productData.filter((x:any) => x.name.toLowerCase().includes(val.toLowerCase()));
+    this.productsearch = this.productData.filter((x: any) => x.name.toLowerCase().includes(val.toLowerCase()));
 
-  console.warn(this.productsearch)
-}
+    console.warn(this.productsearch)
+  }
+  productPage() {
+    if (window.location.href.includes('searchProduct'))
+      return true;
+    else
+      return false
+  }
 }

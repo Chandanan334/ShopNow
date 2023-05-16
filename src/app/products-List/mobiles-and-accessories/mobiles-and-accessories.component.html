@@ -1,19 +1,20 @@
-<!-- <app-navbar></app-navbar> -->
-<div class="headingClass">
-<h2 class="">Mobiles & Accessories</h2>
-</div>
-<br>
-<div class="container">
-        <div class="row" >
-            <div class="col-sm-6 d-flex" *ngFor="let i of productData| slice:0:6">
-                <div class="card" style="width:400px">
+<div style="background-image: url('assets/categoryBImage.jpg');">
+    <div class="container headingClass">
+        <h2 class="">Mobiles & Accessories</h2>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 d-flex" *ngFor="let i of productData| slice:0:6">
+                <div class="card" style="width:300px">
                     <a href="productPage/{{i.id}}" class="stretched-link" style="color: black">
-                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
+                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:300px;">
                         <div class="card-body">
                             <h4 class="card-title">{{i.name}}</h4>
                             <p class="card-text">{{i.symbol}}
                                 <strong style="font-size: 25px">{{i.price}} </strong>
-                                <s>{{i.actualPrice}}</s> {{i.offer}}
+                                <s>{{i.actualPrice}}</s>
+                                <br> {{i.offer}}
                                 <br>{{i.delivery}}</p>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -26,6 +27,7 @@
             </div>
         </div>
     </div>
+</div>
 
 <!-- <div class="container">
         <div class="row">
@@ -152,5 +154,3 @@
     
         </div>
     </div> -->
-    
-

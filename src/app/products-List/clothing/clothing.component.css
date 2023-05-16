@@ -18,7 +18,7 @@ a:link {
 }
 
 .headingClass{
-  text-align: center;
+  /* text-align: center; */
   font: bold;
   font-size: x-large;
   color: black;

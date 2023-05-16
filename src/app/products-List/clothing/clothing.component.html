@@ -1,27 +1,30 @@
-<div class="headingClass">
+<div style="background-image: url('assets/categoryBImage.jpg');">
+    <div class="container headingClass">
         <h2 class="">Clothing</h2>
-        </div>
-        <br>
+    </div>
+    <br>
 
-<div class="container">
-    <div class="row" >
-        <div class="col-sm-6 d-flex" *ngFor="let i of productData| slice:6:10">
-            <div class="card" style="width:400px">
-                <a routerLink="productPage/{{i.id}}" class="stretched-link" style="color: black">
-                    <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{i.name}}</h4>
-                        <p class="card-text">{{i.symbol}}
-                            <strong style="font-size: 25px">{{i.price}} </strong>
-                            <s>{{i.actualPrice}}</s> {{i.offer}}
-                            <br>{{i.delivery}}</p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 d-flex" *ngFor="let i of productData| slice:6:10">
+                <div class="card" style="width:300px">
+                    <a routerLink="productPage/{{i.id}}" class="stretched-link" style="color: black">
+                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:300px;">
+                        <div class="card-body">
+                            <h4 class="card-title">{{i.name}}</h4>
+                            <p class="card-text">{{i.symbol}}
+                                <strong style="font-size: 25px">{{i.price}} </strong>
+                                <s>{{i.actualPrice}}</s>
+                                <br> {{i.offer}}
+                                <br>{{i.delivery}}</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -117,4 +120,3 @@
 
     </div>
 </div> -->
-

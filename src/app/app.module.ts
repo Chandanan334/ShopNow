@@ -12,6 +12,7 @@ import { HomeEssentialsComponent } from './products-List/home-essentials/home-es
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { SearchProductsComponent } from './search-products/search-products.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchProductsComponent } from './search-products/search-products.compo
     HomeEssentialsComponent,
     SidebarComponent,
     ProductPageComponent,
-    SearchProductsComponent
+    SearchProductsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
