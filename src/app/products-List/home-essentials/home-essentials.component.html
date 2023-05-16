@@ -1,12 +1,14 @@
 <!-- <app-navbar></app-navbar> -->
-<h2>Home Essentials</h2>
+<div class="headingClass">
+        <h2 class="">Home Essentials</h2>
+        </div>
+        <br>
 
 <div class="container">
         <div class="row" >
             <div class="col-sm-6 d-flex" *ngFor="let i of productData| slice:10:14">
                 <div class="card" style="width:400px">
                     <a href="productPage/{{i.id}}" class="stretched-link" style="color: black">
-                        <!-- <a href="homeEssentials/productPage/{{i.id}}" class="stretched-link" style="color: black"> -->
                         <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:350px;">
                         <div class="card-body">
                             <h4 class="card-title">{{i.name}}</h4>

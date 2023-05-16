@@ -54,18 +54,25 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <div>{{productDetails[0].name}}</div>
-                <div>{{productDetails[0].color}}</div>
+                <div><h1>{{productDetails[0].name}}</h1></div>
+                <div><h3>{{productDetails[0].color}}</h3></div>
                 <div>{{productDetails[0].symbol}} {{productDetails[0].price}}</div>
-                <div>{{productDetails[0].price}} </div>
-                <div>{{productDetails[0].actualPrice}}</div>
+                
+                <div><s>{{productDetails[0].actualPrice}}</s></div>
                 <div>{{productDetails[0].offer}}</div>
                 <div>{{productDetails[0].delivery}}</div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+    <br>
+    <div class="container">
+
+                <div class="row">
+                        <div class="col-sm-12 d-flex spaceButtons">
+                            <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
+                        </div>
+                        <div class="col-sm-12 d-flex spaceButtons">
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                            </div>
+                    </div>
     </div>

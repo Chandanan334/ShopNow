@@ -11,6 +11,7 @@ import { ClothingComponent } from './products-List/clothing/clothing.component';
 import { HomeEssentialsComponent } from './products-List/home-essentials/home-essentials.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { SearchProductsComponent } from './search-products/search-products.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     ClothingComponent,
     HomeEssentialsComponent,
     SidebarComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    SearchProductsComponent
   ],
   imports: [
     BrowserModule,

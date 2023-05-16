@@ -26,7 +26,11 @@
         </ul>
     </li>
     <div class="form-search" method="get" action="#">
-        <input type="search" name="search" placeholder="search your product here">
-        <button type="submit">Search</button>
+        <input type="search" name="search" placeholder="search your product here" #searchinput>
+        <button (click)="submitSearch(searchinput.value)" routerLink="searchProduct" >Search</button>
     </div>
 </ul>
+<app-sidebar></app-sidebar>
+
+
+<app-search-products [item]="productsearch"></app-search-products>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductData } from 'src/shared/product-data';
+import {SearchProductsComponent} from 'src/app/search-products/search-products.component'
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  productData:any = ProductData;
+  productsearch:any;
+
+submitSearch(val:any){
+  console.warn(val);
+
+  this.productsearch=this.productData.filter((x:any) => x.name.toLowerCase().includes(val.toLowerCase()));
+
+  console.warn(this.productsearch)
+}
 }

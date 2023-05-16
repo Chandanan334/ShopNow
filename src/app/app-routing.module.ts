@@ -5,6 +5,7 @@ import {ClothingComponent} from './products-List/clothing/clothing.component';
 import {HomeEssentialsComponent} from './products-List/home-essentials/home-essentials.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {ProductPageComponent} from './product-page/product-page.component';
+import {SearchProductsComponent} from 'src/app/search-products/search-products.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     path:'productPage/:productId',
     component: ProductPageComponent
   },
+  {
+    path:'searchProduct',
+    component: SearchProductsComponent
+  },
   //shared URL's
   {
     path:'mobileAndAccessories/productPage/:productId',
@@ -41,6 +46,10 @@ const routes: Routes = [
     path:'homeEssentials/productPage/:productId',
     component: ProductPageComponent
   },
+  {
+    path:'searchProduct/productPage/:productId',
+    component: SearchProductsComponent
+  }
 
 ];
 

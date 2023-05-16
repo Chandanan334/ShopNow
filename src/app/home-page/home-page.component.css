@@ -95,3 +95,7 @@ img {vertical-align: middle;}
     font-size: x-large;
     color: black;
 }
+
+.background{
+  background-color: rgb(36, 31, 31);
+}
