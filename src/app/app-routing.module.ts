@@ -6,6 +6,7 @@ import {HomeEssentialsComponent} from './products-List/home-essentials/home-esse
 import {HomePageComponent} from './home-page/home-page.component';
 import {ProductPageComponent} from './product-page/product-page.component';
 import {SearchProductsComponent} from 'src/app/search-products/search-products.component';
+import {NotFoundComponent} from 'src/app/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path:'searchProduct/productPage/:productId',
     component: SearchProductsComponent
+  },
+  {
+    path:'notFound',
+    component: NotFoundComponent
   }
 
 ];

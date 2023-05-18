@@ -1,19 +1,59 @@
 <ul>
     <li>
-        <img src="assets/Logo.png" style="height: 65px;">
+        <a href="">
+            <img src="assets/Logo.png" style="height: 65px;">
+        </a>
     </li>
 
     <li class="home">
         <a href="">
-            <i class="fa-solid fa-house fa-2x"></i>
+            <i class="fa-solid fa-house fa-xl"></i>
+        </a>
+    </li>
+    <li class="sidebar">
+        <a>
+            <app-sidebar></app-sidebar>
+        </a>
+    </li>
+    <li class="myOrders">
+        <a>
+            My Orders
         </a>
     </li>
     <li class="hello">
-        <a>Hello! Harsh</a>
+        <a>Hello!
+            <strong>Harsh</strong>
+        </a>
     </li>
     <li class="icon">
+
         <a class="active">
-            <i class="fa-solid fa-user fa-2x" style="height: 50px;"></i>
+
+            <i class="fa-solid fa-user fa-xl" style="height: 50px;"></i>
+        </a>
+
+        <ul class="dropdown">
+
+            <li class="dropdowna">
+
+                <i class="fa-sharp fa-solid fa-face-smile"></i> Harsh
+            </li>
+
+            <li class="dropdowna">
+
+                <i class="fa-sharp fa-solid fa-location-dot"></i> C-197,Beta-1,Greater Noida
+            </li>
+
+            <li class="dropdowna">
+
+                <i class="fa-solid fa-phone"></i> 7845961236
+            </li>
+        </ul>
+    </li>
+
+    <!-- <li class="icon">
+        <a class="active">
+            <i class="fa-solid fa-user fa-xl" style="height: 50px;"></i>
         </a>
         <ul class="dropdown">
             <li class="dropdowna">
@@ -26,16 +66,25 @@
                 Mobile No: 7845961236
             </li>
         </ul>
+    </li> -->
+    <li class="cart">
+        <a>
+            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+        </a>
     </li>
     <div class="form-search" method="get" action="#">
-        <input type="search" name="search" placeholder="search your product here" #searchinput>
-        <a (click)="submitSearch(searchinput.value)" routerLink="searchProduct"  >
+        <input type="text" name="search" placeholder="search your product here" [(ngModel)]="searchText" (keyup.enter)="submitSearch()">
+        <a (click)="submitSearch()"  >
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
     </div>
 </ul>
-<app-sidebar></app-sidebar>
+<br>
+
 
 <div *ngIf="productPage()">
     <app-search-products [item]="productsearch"></app-search-products>
+</div>
+<div *ngIf="notFound()">
+    <app-not-found></app-not-found>
 </div>

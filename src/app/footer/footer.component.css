@@ -2,10 +2,16 @@
     background-color: #000;
     display: block;
     height: 100px;
+    bottom:0;
+    /* position: fixed;  */
+    width: 100%;
 }
 .containerBox{
     color: azure;
     font-size: 30px;
     text-align: center;
     padding-top: 30px;
+}
+i:hover{
+    color: aquamarine;
 }

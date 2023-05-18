@@ -1,4 +1,4 @@
-<div style="background-image: url('assets/categoryBImage.jpg');">
+<div style="background-image: url('assets/backImage.jpg');">
     <div class="container headingClass">
         <h2 class="">Clothing</h2>
     </div>
@@ -9,14 +9,19 @@
             <div class="col-sm-4 d-flex" *ngFor="let i of productData| slice:6:10">
                 <div class="card" style="width:300px">
                     <a routerLink="productPage/{{i.id}}" class="stretched-link" style="color: black">
-                        <img class="card-img-bottom" src="{{i.image}}" alt="Card image" style="height:300px;">
+                        <img class="card-img-bottom  p-4" src="{{i.image}}" alt="Card image" style="height:300px;">
                         <div class="card-body">
                             <h4 class="card-title">{{i.name}}</h4>
                             <p class="card-text">{{i.symbol}}
                                 <strong style="font-size: 25px">{{i.price}} </strong>
-                                <s>{{i.actualPrice}}</s>
-                                <br> {{i.offer}}
-                                <br>{{i.delivery}}</p>
+                                <span style="color: red">
+                                    <s>{{i.actualPrice}}</s>
+                                </span>
+                                <br>
+                                <span style="color: green"> {{i.offer}}</span>
+                                <br>
+                                {{i.delivery}}
+                            </p>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
@@ -29,94 +34,3 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-sm-6 d-flex">
-            <div class="card" style="width:400px">
-                <a href="#" class="stretched-link" style="color: black">
-                    <img class="card-img-bottom" src="{{productData[6].image}}" alt="Card image" style="height:350px;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{productData[6].name}}</h4>
-                        <p class="card-text">{{productData[6].symbol}}
-                            <strong style="font-size: 25px">{{productData[6].price}} </strong>
-                            <s>{{productData[6].actualPrice}}</s> {{productData[6].offer}}
-                            <br>{{productData[6].delivery}}</p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-sm-6 d-flex">
-            <div class="card" style="width:400px">
-                <a href="#" class="stretched-link" style="color: black">
-                    <img class="card-img-bottom" src="{{productData[7].image}}" alt="Card image" style="height:350px;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{productData[7].name}}</h4>
-                        <p class="card-text">{{productData[7].symbol}}
-                            <strong style="font-size: 25px">{{productData[7].price}} </strong>
-                            <s>{{productData[7].actualPrice}}</s> {{productData[7].offer}}
-                            <br>{{productData[7].delivery}}</p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<br>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 d-flex">
-            <div class="card" style="width:400px">
-                <a href="#" class="stretched-link" style="color: black">
-                    <img class="card-img-bottom" src="{{productData[8].image}}" alt="Card image" style="height:350px;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{productData[8].name}}</h4>
-                        <p class="card-text">{{productData[8].symbol}}
-                            <strong style="font-size: 25px">{{productData[8].price}} </strong>
-                            <s>{{productData[8].actualPrice}}</s> {{productData[8].offer}}
-                            <br>{{productData[8].delivery}}</p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-sm-6 d-flex">
-            <div class="card" style="width:400px">
-                <a href="#" class="stretched-link" style="color: black">
-                    <img class="card-img-bottom" src="{{productData[9].image}}" alt="Card image" style="height:350px;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{productData[9].name}}</h4>
-                        <p class="card-text">{{productData[9].symbol}}
-                            <strong style="font-size: 25px">{{productData[9].price}} </strong>
-                            <s>{{productData[9].actualPrice}}</s> {{productData[9].offer}}
-                            <br>{{productData[9].delivery}}</p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary">{{stringData.addToCart}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-    </div>
-</div> -->

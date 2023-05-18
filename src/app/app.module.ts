@@ -13,6 +13,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { SearchProductsComponent } from './search-products/search-products.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { FooterComponent } from './footer/footer.component';
     SidebarComponent,
     ProductPageComponent,
     SearchProductsComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

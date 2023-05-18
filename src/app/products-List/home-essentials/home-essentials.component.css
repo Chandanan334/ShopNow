@@ -15,6 +15,7 @@ a:link {
   }
   .card {
     margin-bottom: 2em;
+    border-radius: 7px;
 }
 
 .headingClass{

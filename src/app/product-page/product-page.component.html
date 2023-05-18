@@ -22,13 +22,13 @@
                     </h4>
                 </div>
 
-                <div>
+                <div style="color: red">
                     <s>
                         <h5>{{productDetails[0].actualPrice}}</h5>
                     </s>
                 </div>
                 <div>
-                    <h6>{{productDetails[0].offer}}</h6>
+                    <h5 style="color: green">{{productDetails[0].offer}}</h5>
                 </div>
                 <div>
                     <h5>{{productDetails[0].delivery}}</h5>
@@ -44,12 +44,36 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+<br>
     </div>
+    <div class="container">
+        <div class="row" *ngIf="productDetails">
+            <div class="col-sm-6">
+                <p style="color: darkcyan;font-size: 20px" ><strong>{{productDetails[0].description}}</strong></p>
+                {{productDetails[0].description1}}
+            </div>
+            <div class="col-sm-6">
+                    <p >Sold by <span style="color: darkcyan;" >{{productDetails[0].description2}}</span> and Fulfilled by <span style="color: darkcyan;" >ShopNow</span> </p>
+                    {{productDetails[0].description3}}
+            </div>
+        </div>
+        <br>
+        <div class="row" *ngIf="productDetails">
+                <div class="col-sm-3">
+                    </div>
+            <div class="col-sm-6">
+                
+                <!-- <p style="color: darkcyan;" >{{productDetails[0].description2}}</p>
+                {{productDetails[0].description3}} -->
+            </div>
+            <!-- <div class="col-sm-3">
+                </div> -->
+        </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+</div>
