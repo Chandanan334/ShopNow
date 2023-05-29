@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductData } from 'src/shared/product-data';
 import { SearchProductsComponent } from 'src/app/search-products/search-products.component'
 import { ActivatedRoute, Router } from '@angular/router';
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @Component({
   selector: 'app-navbar',
@@ -14,25 +15,26 @@ export class NavbarComponent {
   productsearch: any;
   searchText: any;
   isNotFound: any;
+  keyword = 'name';
   constructor(private router: Router) {
 
   }
 
   submitSearch() {
     console.log("Hello");
-    this.productsearch = this.productData.filter((x: any) => x.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    if (this.productsearch.length == 0) {
+    if (this.searchText!=" ")
+    this.productsearch = this.productData.filter((x: any) => x.name.toLowerCase().replaceAll(" ","").includes(this.searchText.toLowerCase().replaceAll(" ","")) || 
+                                                            x.description.toLowerCase().replaceAll(" ","").includes(this.searchText.toLowerCase().replaceAll(" ","")));
+    else
+    this.productsearch = this.productData;
+
+    if (this.productsearch.length == 0)
       this.isNotFound = true;
-      this.router.navigate(['/notFound']);
-    }
-
-    else {
+    else 
       this.isNotFound = false;
-      this.router.navigate(['/searchProduct']);
-    }
+    
 
-    //console.log(this.productsearch);
-    // this.router.navigate(['/searchProduct']);
+    this.router.navigate(['/searchProduct']);
   }
   productPage() {
     if (window.location.href.includes('searchProduct'))

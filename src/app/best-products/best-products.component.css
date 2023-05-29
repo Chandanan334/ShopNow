@@ -16,3 +16,14 @@ a:link {
   .card{
     border-radius: 7px;
   }
+
+   .zoom {
+    padding: 30px;
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+    }
+  
+    
+    .zoom:hover {
+      transform: scale(1.04);
+    }

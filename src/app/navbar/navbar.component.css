@@ -4,9 +4,9 @@ ul {
     padding: 0; 
     overflow: hidden; 
     background-color: #333; 
-    /* position: fixed; */
-    /* width: 100%;
-    z-index: 999; */
+    bottom: 0;
+    margin-top: -24px;
+
 }
 
 li { 
@@ -28,57 +28,52 @@ li img {
     text-decoration: none; 
 } 
 
-/* Change the link color to #111 (black) on hover */ 
-/* li a:hover { 
-    background-color: #111; 
-}  */
-
 .icon{ 
     display: flex; 
     position:absolute; 
-    right: 70px; 
-    top: 18px; 
+    right: 50px; 
+    top: 20px; 
 }
 .hello{
     display: flex;
     position:absolute;
-    right: 135px;
-    top: 18px;
-    font-size: 16px;
+    right: 100px;
+    top: 22px;
+    font-size: 14px;
 }
 .myOrders{
     display: flex;
     position:absolute;
-    right: 250px;
-    top: 18px;
-    font-size: 16px;
+    right: 275px;
+    top: 22px;
+    font-size: 14px;
 }
 
 .sidebar{
     display: flex; 
     position:absolute; 
-    left: 150px; 
-    top: 25px;
+    left: 200px; 
+    top: 33px;
 }
 .home{ 
     display: flex; 
     position:absolute; 
-    left: 110px; 
+    left: 130px; 
     top: 20px; 
 }
 
 .cart{
     display: flex; 
     position:absolute; 
-    right: 10px; 
-    top: 18px;
+    right: 220px; 
+    top: 20px;
 }
 
 .form-search{ 
     margin: 9px auto; 
     text-align: center; 
     font:  13px sans-serif; 
-    max-width: 60%; 
+    max-width: 50%; 
     position: relative; 
 }
 
@@ -98,22 +93,22 @@ li img {
 
 .form-search i{ 
     position: absolute;
-    top: 14px;
+    top: 12px;
     right: 220px;
     font-size: 16px;
     color:black;
 }
 
 ul li a:hover { 
-    color: aquamarine; 
+    color: grey; 
     /* background:black;  */
 }
 
 ul li ul.dropdown { 
-    min-width: 100%; 
+    /* min-width: 100%;  */
     /* Set width of the dropdown */ 
     background: black; 
-    width: 200px;
+    /* width: 200px; */
     display: none; 
     position: absolute; 
     z-index: 999; 
@@ -124,7 +119,6 @@ ul li ul.dropdown {
 ul li:hover ul.dropdown { 
     display: block; 
     background-color: #f2f2f2;
-    /* Display the dropdown */ 
 } 
 
 
@@ -133,4 +127,14 @@ ul li:hover ul.dropdown {
     padding: 8px 25px; 
     color: #000; 
     text-decoration: none; 
+}
+
+.container{
+    width: 265px;
+    position: fixed;
+    color: white;
+    background-color: #333;
+    height: 151px;
+    right: 23px;
+    top: 65px;
 }

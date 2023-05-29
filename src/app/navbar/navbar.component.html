@@ -1,13 +1,13 @@
 <ul>
     <li>
         <a href="">
-            <img src="assets/Logo.png" style="height: 65px;">
+            <img src="assets/shopNowLogo.png" style="height: 65px; width: 95px">
         </a>
     </li>
 
     <li class="home">
         <a href="">
-            <i class="fa-solid fa-house fa-xl"></i>
+            <i class="fa-solid fa-house fa-lg"></i>
         </a>
     </li>
     <li class="sidebar">
@@ -29,57 +29,62 @@
 
         <a class="active">
 
-            <i class="fa-solid fa-user fa-xl" style="height: 50px;"></i>
+            <i class="fa-solid fa-user fa-lg" ></i>
         </a>
 
         <ul class="dropdown">
-
-            <li class="dropdowna">
-
-                <i class="fa-sharp fa-solid fa-face-smile"></i> Harsh
-            </li>
-
-            <li class="dropdowna">
-
-                <i class="fa-sharp fa-solid fa-location-dot"></i> C-197,Beta-1,Greater Noida
-            </li>
-
-            <li class="dropdowna">
-
-                <i class="fa-solid fa-phone"></i> 7845961236
-            </li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <i class="fa-sharp fa-solid fa-user"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        Harsh
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        C-197, Beta-1, Greater Noida                     
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        7845961236                     
+                    </div>
+                </div>           
+            </div>
         </ul>
     </li>
-
-    <!-- <li class="icon">
-        <a class="active">
-            <i class="fa-solid fa-user fa-xl" style="height: 50px;"></i>
-        </a>
-        <ul class="dropdown">
-            <li class="dropdowna">
-                Name: Harsh
-            </li>
-            <li class="dropdowna">
-                Address: C-197,Beta-1,Greater Noida
-            </li>
-            <li class="dropdowna">
-                Mobile No: 7845961236
-            </li>
-        </ul>
-    </li> -->
     <li class="cart">
         <a>
-            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
         </a>
     </li>
     <div class="form-search" method="get" action="#">
-        <input type="text" name="search" placeholder="search your product here" [(ngModel)]="searchText" (keyup.enter)="submitSearch()">
+        <div class="ng-autocomplete">
+            <ng-autocomplete [data]="productData" [searchKeyword]="keyword" placeholder="search....." (keyup.enter)="submitSearch()"
+                [(ngModel)]="searchText" type="text" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"> </ng-autocomplete>
+            <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.name"></a>
+            </ng-template>
+            <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="notFound"></div>
+            </ng-template>
+        </div>
         <a (click)="submitSearch()"  >
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
     </div>
 </ul>
-<br>
+
 
 
 <div *ngIf="productPage()">

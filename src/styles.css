@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+.autocomplete-container .suggestions-container ul{
+     position: fixed;   
+     width: 35.50%;
+     right: 627px;
+     top:49px;
+     background-color: white;
+}
+
+.autocomplete-container .not-found div{
+    position: fixed;
+    width: 35.50%;
+     right: 627px;
+    background-color: white;
+    color: black;
+    top: 49px;
+}
+
+.autocomplete-container .not-found {
+    padding: 0 0.75em;
+    border: none;
+    background: white;
+}
+
+.autocomplete-container .input-container input {
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: #fff;
+    color: #000000de;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+    height: 40px;
+    left: 39px;
+    position: absolute;
+}
+
+div .autocomplete-container{
+    box-shadow: none;
+}
+
+div .autocomplete-container .not-found{
+    box-shadow: none;
+}
+
+.autocomplete-container.active {
+    box-shadow: none;
+}
+
+
